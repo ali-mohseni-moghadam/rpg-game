@@ -58,7 +58,7 @@ async function gameScene(BABYLON, engine, currentScene) {
   let heroDamage = 50;
   let heroLife = { currentHp: 100, maxHp: 100 };
   let ourTargetPosition;
-  let characterSpeed = 6;
+  let characterSpeed = 4;
 
   const scene = new Scene(engine);
 
@@ -511,9 +511,9 @@ async function gameScene(BABYLON, engine, currentScene) {
     GAMEOVER = true;
     redRectangle.width = `${(0 / heroLife.maxHp) * 100 * 2}px`;
     lifeTotal.text = `${0}/${heroLife.maxHp}`;
-    anims.forEach((anim) => {
+    animation.forEach((anim) => {
       if (anim.name.includes("idle")) anim.stop();
-      anim.name === "death" ? anim.play : anim.stop();
+      anim.name === "death" ? anim.play() : anim.stop();
     });
 
     setTimeout(() => {
