@@ -8,6 +8,9 @@ dependencies:
   '@babylonjs/core':
     specifier: ^6.47.0
     version: 6.47.0
+  '@babylonjs/gui':
+    specifier: ^7.0.0
+    version: 7.0.0(@babylonjs/core@6.47.0)
   '@babylonjs/loaders':
     specifier: ^6.47.0
     version: 6.47.0(@babylonjs/core@6.47.0)(babylonjs-gltf2interface@6.47.0)
@@ -21,6 +24,14 @@ packages:
 
   /@babylonjs/core@6.47.0:
     resolution: {integrity: sha512-+zu8xQkgcSOV8J99jiJ4uG0kuPRlGsA1BzwHiYgB/psX7MLWl8r4n5gbG7qUe4vEyYS2twaZW37OeT2Xf5ITHA==}
+    dev: false
+
+  /@babylonjs/gui@7.0.0(@babylonjs/core@6.47.0):
+    resolution: {integrity: sha512-IWnOlSE0sWt1TpFwNjXdJynbOdWKK06/ZfowzzzOKSzkl746Xm/s2UgFWxwoHQ6f04/s2r39Jf7NjpCSKdhfcA==}
+    peerDependencies:
+      '@babylonjs/core': ^7.0.0
+    dependencies:
+      '@babylonjs/core': 6.47.0
     dev: false
 
   /@babylonjs/loaders@6.47.0(@babylonjs/core@6.47.0)(babylonjs-gltf2interface@6.47.0):
