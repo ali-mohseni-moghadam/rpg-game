@@ -227,7 +227,6 @@ async function gameScene(BABYLON, engine, currentScene) {
 
       targetName = pickInfo.pickedMesh.name;
       targetId = pickInfo.pickedMesh.id;
-      console.log(targetName);
 
       pickInfo.pickedPoint.y = characterBox.position.y;
       ourTargetPosition = pickInfo.pickedPoint;
@@ -326,7 +325,7 @@ async function gameScene(BABYLON, engine, currentScene) {
         (targetDetail.hp / targetDetail.maxHp) * 100 * 4
       }px`;
       animation.forEach((anim) => anim.name === "attack" && anim.stop());
-    }, 1150);
+    }, 2000);
   }
 
   function createLifeBar(parent, hp, maxHp, scene, posY) {
